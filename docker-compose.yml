@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  webapp:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./cleaned_crime_data.csv:/app/cleaned_crime_data.csv
+      - ./templates:/app/templates
+      - ./analysis:/app/analysis
+      - ./visualizations:/app/visualizations
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped 
