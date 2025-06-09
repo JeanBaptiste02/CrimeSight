@@ -1,83 +1,61 @@
-# Crime Data Analysis Dashboard
+# CrimeSight - Analyse et Prédiction de Crimes
 
-This project provides a comprehensive analysis of crime data with an interactive web dashboard for visualization.
+CrimeSight est une application web interactive permettant d'analyser et de prédire les catégories de crimes basée sur un ensemble de données criminelles. L'application offre une interface moderne avec des visualisations interactives et des fonctionnalités de prédiction.
 
-## Features
+![Interface de l'application](webapp_demo.png)
 
-- Data preprocessing and cleaning
-- Descriptive statistics
-- Interactive visualizations
-- Advanced insights and analysis
-- Web-based dashboard
+## À propos du Projet
 
-## Setup
+CrimeSight permet aux utilisateurs de :
+- Visualiser la distribution des crimes par catégorie
+- Analyser les tendances par type de rapport
+- Explorer les caractéristiques démographiques des auteurs et des victimes
+- Prédire la catégorie de crime basée sur des caractéristiques spécifiques
 
-1. Install the required dependencies:
+### Dataset
+
+Le projet utilise un dataset de crimes incluant les informations suivantes :
+- Caractéristiques des auteurs (âge, genre, race)
+- Caractéristiques des victimes (âge, genre, race)
+- Type de rapport
+- Catégorie de crime
+- Disposition du cas
+
+## Installation
+
+1. Clonez le repository :
+```bash
+git clone https://github.com/votre-username/CrimeSight.git
+cd CrimeSight
+```
+
+2. Créez un environnement virtuel Python (recommandé) :
+```bash
+python -m venv venv
+source venv/bin/activate  # Sur Windows : venv\Scripts\activate
+```
+
+3. Installez les dépendances :
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Place your crime data CSV file in the root directory as `crime_data.csv`
+## Dépendances
 
-3. Run the analysis script:
+Le projet utilise les bibliothèques Python suivantes :
+- `flask==3.0.0` : Framework web
+- `pandas==2.2.0` : Manipulation et analyse de données
+- `numpy==1.26.4` : Calculs numériques
+- `scikit-learn==1.4.0` : Machine Learning
+- `matplotlib==3.8.2` : Visualisation de données
+- `seaborn==0.13.2` : Visualisation statistique
+- `joblib==1.3.2` : Sauvegarde des modèles
+
+## Lancement de l'Application
+
+1. Assurez-vous que toutes les dépendances sont installées
+2. Lancez l'application Flask :
 ```bash
-python crime_analysis.py
+python app.py
 ```
-
-4. Open `index.html` in a web browser to view the dashboard
-
-## Output Files
-
-The analysis generates several output files:
-
-- `cleaned_crime_data.csv`: Preprocessed and cleaned dataset
-- `crime_statistics.json`: Descriptive statistics
-- `crime_relationships.json`: Relationship analysis
-- `crime_insights.json`: Advanced insights
-- `visualizations/`: Directory containing all generated visualizations
-
-## Dashboard Sections
-
-1. Overview Statistics
-   - Total record count
-   - Categorical value distributions
-
-2. Visualizations
-   - Age distributions
-   - Gender distributions
-   - Race distributions
-   - Crime category distributions
-   - Fatal status distributions
-
-3. Advanced Insights
-   - Top crime categories by victim age
-   - Violence crime demographics
-   - Victim-offender relationships
-
-## Data Requirements
-
-The input CSV file should contain the following columns:
-- Disposition
-- OffenderStatus
-- Offender_Race
-- Offender_Gender
-- Offender_Age
-- PersonType
-- Victim_Race
-- Victim_Gender
-- Victim_Age
-- Victim_Fatal_Status
-- Report Type
-- Category
-
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Plotly
-- scikit-learn
-- HTML/CSS/JavaScript
-- Bootstrap 
+3. Accédez à l'application dans votre navigateur : `http://localhost:5000`
