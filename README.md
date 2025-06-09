@@ -2,7 +2,9 @@
 
 CrimeSight est une application web interactive permettant d'analyser et de prédire les catégories de crimes basée sur un ensemble de données criminelles. L'application offre une interface moderne avec des visualisations interactives et des fonctionnalités de prédiction.
 
-![Interface de l'application](webapp_demo.png)
+<div align="center">
+  <img src="webapp_demo.png" alt="Interface de l'application" width="800"/>
+</div>
 
 ## À propos du Projet
 
